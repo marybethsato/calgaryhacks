@@ -60,13 +60,10 @@ class ScanDetailsView extends GetView<ScanController> {
               Padding(
                 padding: const EdgeInsets.all(20.0),
                 child: CircleAvatar(
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: CloseButton(
-                      onPressed: () {
-                        Get.back();
-                      },
-                    ),
+                  child: CloseButton(
+                    onPressed: () {
+                      Get.back();
+                    },
                   ),
                 ),
               )

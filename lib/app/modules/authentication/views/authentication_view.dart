@@ -1,3 +1,6 @@
+import 'package:calgaryhacks/app/modules/scan/controllers/scan_controller.dart';
+import 'package:calgaryhacks/app/modules/scan/views/scan_view.dart';
+import 'package:calgaryhacks/app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -35,6 +38,20 @@ class AuthenticationView extends GetView<AuthenticationController> {
                   child: Text(
                     "Sign In with Google",
                     style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+                  ),
+                )),
+            const SizedBox(
+              height: 8,
+            ),
+            TextButton(
+                onPressed: () {
+                  Get.to(ScanView());
+                },
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                    "Try it first",
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
                   ),
                 ))
           ],

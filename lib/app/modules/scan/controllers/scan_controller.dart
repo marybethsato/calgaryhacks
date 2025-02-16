@@ -32,7 +32,7 @@ class ScanController extends GetxController {
       isCameraLoading.value = true;
       message.value = "Initializing camera...";
       cameras = await availableCameras();
-      message.value = "Got available cameras...${cameras.length}";
+      message.value = "Got available cameras..";
       if (cameras.isNotEmpty) {
         await _initCameraController(cameras.last);
         message.value = "Camera set...";
@@ -98,7 +98,7 @@ class ScanController extends GetxController {
       if (response.statusCode == 200) {
         var responseBody = await response.stream.bytesToString();
         currentTaxon.value = TaxonModel.fromJson(jsonDecode(responseBody));
-        Get.toNamed(Routes.SCAN_DETAILS);
+        Get.to(Routes.SCAN_DETAILS);
       } else {
         print("API Error: ${response.statusCode}");
         currentTaxon.value = null;

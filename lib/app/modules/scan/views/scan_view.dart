@@ -27,9 +27,31 @@ class ScanView extends GetView<ScanController> {
         }
         return Stack(
           children: [
-            Positioned.fill(
-              child: CameraPreview(controller.cameraController),
+            SizedBox(
+              width: Size.infinite.width,
+              height: Size.infinite.height,
+              child: Positioned.fill(
+                child: CameraPreview(controller.cameraController),
+              ),
             ),
+            Positioned(
+              bottom: 1,
+              left: 1,
+              right: 1,
+              child: Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: CircleAvatar(
+                  radius: 30,
+                  child: IconButton(
+                      onPressed: () {
+                        controller.captureAndIdentifySpecies();
+                      },
+                      icon: Icon(
+                        Icons.camera_alt_outlined,
+                      )),
+                ),
+              ),
+            )
           ],
         );
       }),

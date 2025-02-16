@@ -44,11 +44,6 @@ class AppPages {
       binding: NavigationBinding(),
     ),
     GetPage(
-      name: _Paths.SCAN,
-      page: () => const ScanView(),
-      binding: ScanBinding(),
-    ),
-    GetPage(
       name: _Paths.SCAN_DETAILS,
       page: () => const ScanDetailsView(),
       binding: ScanBinding(),
