@@ -1,11 +1,8 @@
 import 'dart:convert';
-import 'dart:html';
 import 'dart:typed_data';
 import 'package:calgaryhacks/app/models/taxon.model.dart';
-import 'package:calgaryhacks/app/modules/scan/views/scan_details_view.dart';
 import 'package:calgaryhacks/app/routes/app_pages.dart';
 import 'package:camera/camera.dart';
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
 
@@ -51,7 +48,7 @@ class ScanController extends GetxController {
 
   Future<void> _initCameraController(CameraDescription camera) async {
     cameraController =
-        CameraController(camera, ResolutionPreset.high, enableAudio: true);
+        CameraController(camera, ResolutionPreset.max, enableAudio: true);
     try {
       await cameraController.initialize();
       isCameraInitialized.value = true;
@@ -98,7 +95,7 @@ class ScanController extends GetxController {
       if (response.statusCode == 200) {
         var responseBody = await response.stream.bytesToString();
         currentTaxon.value = TaxonModel.fromJson(jsonDecode(responseBody));
-        Get.to(Routes.SCAN_DETAILS);
+        Get.toNamed(Routes.SCAN_DETAILS);
       } else {
         print("API Error: ${response.statusCode}");
         currentTaxon.value = null;

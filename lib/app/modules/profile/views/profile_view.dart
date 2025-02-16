@@ -28,7 +28,7 @@ class ProfileView extends GetView<ProfileController> {
             const SizedBox(
               height: 20,
             ),
-            const Center(child: Text('V1.0.9'))
+            const Center(child: Text('V1.1.0'))
           ],
         ),
       ),
