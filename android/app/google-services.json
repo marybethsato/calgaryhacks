@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "465821997848",
+    "project_id": "calgaryhacks2025",
+    "storage_bucket": "calgaryhacks2025.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:465821997848:android:8d0c06ca1e75f29d9d5c6d",
+        "android_client_info": {
+          "package_name": "com.example.calgaryhacks"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWiw3R-U4HZml7AKLaOO4HJ0H43unFVSI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
