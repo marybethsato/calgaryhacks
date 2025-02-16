@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import '../controllers/authentication_controller.dart';
 
@@ -8,20 +9,34 @@ class AuthenticationView extends GetView<AuthenticationController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('AuthenticationView'),
-        centerTitle: true,
-      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            Image.asset(
+              'assets/logo.png',
+              height: MediaQuery.of(context).size.height * 0.3,
+            ),
+            Text("Catchy!", style: GoogleFonts.dynaPuff(fontSize: 50)),
+            const SizedBox(
+              height: 40,
+            ),
+            Text('Login to continue', style: TextStyle(fontSize: 16)),
+            const SizedBox(
+              height: 10,
+            ),
             FilledButton(
                 onPressed: () {
                   controller.handleSignIn();
                 },
-                child: Text("Sign In with Google"))
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                    "Sign In with Google",
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+                  ),
+                ))
           ],
         ),
       ),

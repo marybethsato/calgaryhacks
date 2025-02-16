@@ -1,0 +1,16 @@
+{
+  "projects": {},
+  "targets": {
+    "calgaryhacks2025": {
+      "hosting": {
+        "site1": [
+          "calgaryhacks2025"
+        ],
+        "site2": [
+          "site2-calgaryhacks2025"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
